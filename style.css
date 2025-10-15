@@ -1,0 +1,219 @@
+/* --------- ESTILOS GENERALES --------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #2f2f2f;
+}
+
+/* --------- ENCABEZADO --------- */
+header {
+  text-align: center;
+  background-color: #2f4b93; /* azul del logo */
+  color: white;
+  padding: 2.5rem 1rem;
+  border-bottom: 6px solid #f2c500; /* amarillo dorado */
+}
+
+.logo-container {
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 500px; /* tamaño grande */
+  height: auto;
+}
+
+/* --------- TÍTULOS --------- */
+h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  font-weight: 700;
+  color: #f2c500;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+/* --------- NAVEGACIÓN --------- */
+nav {
+  background-color: #2f4b93; /* azul institucional */
+  padding: 0.8rem 0;
+  text-align: center;
+  border-top: 4px solid #f2c500;
+  border-bottom: 4px solid #f2c500;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s, background 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+nav ul li a:hover {
+  background-color: #f2c500;
+  color: #2f4b93;
+}
+
+nav ul li a.activo {
+  background-color: #f2c500;
+  color: #2f4b93;
+}
+
+
+/* --------- SECCIÓN PRINCIPAL --------- */
+main {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #e4e7ee;
+  border-left: 6px solid #2f4b93;
+  border-right: 6px solid #2f4b93;
+  border-radius: 8px;
+}
+
+.presentacion h2 {
+  color: #2f4b93;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.presentacion p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333333;
+}
+
+/* --------- BOTÓN --------- */
+.boton {
+  display: inline-block;
+  background-color: #f2c500;
+  color: #2f4b93;
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #2f4b93;
+  color: #ffffff;
+}
+
+/* --------- PIE DE PÁGINA --------- */
+footer {
+  text-align: center;
+  background-color: #2f4b93;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: white;
+  border-top: 6px solid #f2c500;
+}
+
+
+
+/* --------- ESTILO PARA CUENTOS --------- */
+.cuento {
+  margin-bottom: 3rem;
+}
+
+.cuento h2 {
+  font-size: 1.8rem;
+  color: #2f4b93;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.autor {
+  text-align: left;
+  color: #145491;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.cuento p {
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.divisor {
+  border: none;
+  border-top: 3px solid #f2c500;
+  margin: 3rem auto;
+  width: 50%;
+}
+
+
+.poesia {
+  text-align: center;        /* Centra el texto */
+  font-style: italic;        /* Letra en cursiva */
+  line-height: 1.8;          /* Espacio entre líneas más cómodo */
+  margin: 20px auto;         /* Márgenes arriba y abajo, centrado horizontal */
+  max-width: 700px;          /* Limita el ancho para que no se vea muy largo */
+  font-size: 1.1em;          /* Tamaño de fuente ligeramente mayor */
+  color: #333;               /* Color suave, legible */
+}
+
+.autor {
+  display: flex;           /* permite que la imagen y el texto estén en línea */
+  align-items: center;     /* centra verticalmente la imagen con el texto */
+  gap: 10px;               /* espacio entre la imagen y el texto */
+  margin: 10px 0;
+}
+
+.foto-autor {
+  width: 50px;             /* ancho fijo */
+  height: 50px;            /* alto fijo */
+  object-fit: cover;       /* mantiene la proporción y recorta si es necesario */
+  border-radius: 5px;      /* bordes ligeramente redondeados */
+}
+
+
+.presentacion {
+  display: flex;            /* permite alinear imagen y texto horizontalmente */
+  align-items: flex-start;  /* alinea arriba */
+  gap: 20px;                /* espacio entre imagen y texto */
+  margin: 20px 0;
+}
+
+.imagen-presentacion {
+  width: 350px;             /* ancho fijo */
+  height: 350px;            /* alto fijo */
+  object-fit: cover;        /* recorta la imagen para mantener proporción */
+  border-radius: 10px;      /* opcional, bordes redondeados */
+}
+
+.texto-presentacion {
+  flex: 1;                  /* ocupa el espacio restante */
+}
+
+
+
+
+
