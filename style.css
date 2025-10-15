@@ -188,8 +188,8 @@ footer {
 }
 
 .foto-autor {
-  width: 50px;             /* ancho fijo */
-  height: 50px;            /* alto fijo */
+  width: 80px;             /* ancho fijo */
+  height: 80px;            /* alto fijo */
   object-fit: cover;       /* mantiene la proporción y recorta si es necesario */
   border-radius: 5px;      /* bordes ligeramente redondeados */
 }
