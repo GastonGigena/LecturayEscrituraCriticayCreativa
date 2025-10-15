@@ -296,5 +296,15 @@ footer {
 }
 
 
+hr {
+  border: none;          /* Quitamos el borde predeterminado */
+  height: 6px;           /* Ajustamos el grosor */
+  background-color: #f2c500; /* Color del HR */
+  width: 100%;            /* Ancho del HR (puede ser % o px) */
+  margin: 20px auto;     /* Centrar horizontalmente y agregar espacio arriba/abajo */
+}
+
+
+
 
 
