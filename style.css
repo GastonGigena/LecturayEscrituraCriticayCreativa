@@ -79,8 +79,8 @@ nav ul li a.activo {
 /* --------- SECCIÓN PRINCIPAL --------- */
 main {
   max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem;
+  margin: 2rem auto;
+  padding: 1rem;
   background-color: #e4e7ee;
   border-left: 6px solid #2f4b93;
   border-right: 6px solid #2f4b93;
@@ -304,6 +304,27 @@ hr {
   margin: 20px auto;     /* Centrar horizontalmente y agregar espacio arriba/abajo */
 }
 
+/* STYLE PARA INDEX*/
+
+body.pantalla-completa {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* El main solo de esta página ocupará el espacio central */
+body.pantalla-completa main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Opcional: para que el footer quede fijo abajo */
+body.pantalla-completa footer {
+  margin-top: auto;
+}
 
 
 
