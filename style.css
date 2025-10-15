@@ -21,7 +21,8 @@ header {
 }
 
 .logo {
-  width: 500px; /* tamaño grande */
+  width: 100%;
+  max-width: 500px; /* límite para pantallas grandes */
   height: auto;
 }
 
@@ -42,7 +43,7 @@ h1 {
 
 /* --------- NAVEGACIÓN --------- */
 nav {
-  background-color: #2f4b93; /* azul institucional */
+  background-color: #2f4b93;
   padding: 0.8rem 0;
   text-align: center;
   border-top: 4px solid #f2c500;
@@ -53,12 +54,10 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: inline-flex;
-  gap: 2rem;
-}
-
-nav ul li {
-  display: inline;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* ✅ se adapta cuando hay poco espacio */
+  gap: 1rem;
 }
 
 nav ul li a {
@@ -71,16 +70,11 @@ nav ul li a {
   border-radius: 6px;
 }
 
-nav ul li a:hover {
-  background-color: #f2c500;
-  color: #2f4b93;
-}
-
+nav ul li a:hover,
 nav ul li a.activo {
   background-color: #f2c500;
   color: #2f4b93;
 }
-
 
 /* --------- SECCIÓN PRINCIPAL --------- */
 main {
@@ -93,17 +87,25 @@ main {
   border-radius: 8px;
 }
 
-.presentacion h2 {
-  color: #2f4b93;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+/* --------- PRESENTACIÓN --------- */
+.presentacion {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap; /* ✅ permite que se acomode en móviles */
 }
 
-.presentacion p {
-  line-height: 1.6;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #333333;
+.imagen-presentacion {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.texto-presentacion {
+  flex: 1;
+  min-width: 250px;
 }
 
 /* --------- BOTÓN --------- */
@@ -127,13 +129,12 @@ main {
 footer {
   text-align: center;
   background-color: #2f4b93;
-  padding: 1rem;
-  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-size: 0.95rem;
   color: white;
   border-top: 6px solid #f2c500;
+  line-height: 1.5;
 }
-
-
 
 /* --------- ESTILO PARA CUENTOS --------- */
 .cuento {
@@ -148,10 +149,19 @@ footer {
 }
 
 .autor {
-  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 2rem;
   color: #145491;
   font-weight: bold;
-  margin-bottom: 2rem;
+}
+
+.foto-autor {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .cuento p {
@@ -169,51 +179,70 @@ footer {
   width: 50%;
 }
 
-
+/* --------- POESÍA --------- */
 .poesia {
-  text-align: center;        /* Centra el texto */
-  font-style: italic;        /* Letra en cursiva */
-  line-height: 1.8;          /* Espacio entre líneas más cómodo */
-  margin: 20px auto;         /* Márgenes arriba y abajo, centrado horizontal */
-  max-width: 700px;          /* Limita el ancho para que no se vea muy largo */
-  font-size: 1.1em;          /* Tamaño de fuente ligeramente mayor */
-  color: #333;               /* Color suave, legible */
+  text-align: center;
+  font-style: italic;
+  line-height: 1.8;
+  margin: 20px auto;
+  max-width: 700px;
+  font-size: 1.1em;
+  color: #333;
 }
 
-.autor {
-  display: flex;           /* permite que la imagen y el texto estén en línea */
-  align-items: center;     /* centra verticalmente la imagen con el texto */
-  gap: 10px;               /* espacio entre la imagen y el texto */
-  margin: 10px 0;
+/* --------- MEDIA QUERIES --------- */
+
+/* 📱 Móviles */
+@media (max-width: 768px) {
+  header {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .logo {
+    max-width: 300px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  main {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .presentacion {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imagen-presentacion {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .cuento h2 {
+    font-size: 1.4rem;
+  }
+
+  .boton {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+  }
 }
 
-.foto-autor {
-  width: 80px;             /* ancho fijo */
-  height: 80px;            /* alto fijo */
-  object-fit: cover;       /* mantiene la proporción y recorta si es necesario */
-  border-radius: 5px;      /* bordes ligeramente redondeados */
+/* 💻 Tablets y pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    width: 95%;
+  }
+
+  .logo {
+    max-width: 400px;
+  }
 }
-
-
-.presentacion {
-  display: flex;            /* permite alinear imagen y texto horizontalmente */
-  align-items: flex-start;  /* alinea arriba */
-  gap: 20px;                /* espacio entre imagen y texto */
-  margin: 20px 0;
-}
-
-.imagen-presentacion {
-  width: 350px;             /* ancho fijo */
-  height: 350px;            /* alto fijo */
-  object-fit: cover;        /* recorta la imagen para mantener proporción */
-  border-radius: 10px;      /* opcional, bordes redondeados */
-}
-
-.texto-presentacion {
-  flex: 1;                  /* ocupa el espacio restante */
-}
-
-
-
-
-
