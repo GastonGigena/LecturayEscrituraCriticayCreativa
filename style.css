@@ -246,3 +246,32 @@ footer {
     max-width: 400px;
   }
 }
+
+.imagen-presentacion { 
+  position: relative;
+  width: 300px;
+  animation: cabalgata 4s ease-in-out infinite;
+}
+
+@keyframes cabalgata {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translateX(10px) translateY(-5px) rotate(2deg);
+  }
+  40% {
+    transform: translateX(20px) translateY(0px) rotate(-1deg);
+  }
+  60% {
+    transform: translateX(30px) translateY(5px) rotate(2deg);
+  }
+  80% {
+    transform: translateX(20px) translateY(0px) rotate(-1deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
+
+
