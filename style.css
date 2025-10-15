@@ -275,3 +275,26 @@ footer {
 }
 
 
+
+.boton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #f2c500; /* color fijo */
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  animation: boton-latido 1.5s ease-in-out infinite;
+}
+
+@keyframes boton-latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* crece un 5% y vuelve */
+  }
+}
+
+
+
+
